@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="bookcartApp">
+    <head>
+       	<link rel="shortcut icon" href="">
+        <title>AngularJS Book Cart App</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        
+       <link rel="stylesheet" href="bootstrap.min.css" />
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em;
+            }
+        </style>
+        
+        <!-- load angular via CDN -->
+       <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+       <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="angular.min.js"></script>
+        <script src="angular-route.min.js"></script>
+        <script src="angular-resource.min.js"></script>
+        <script src="angular-animate.min.js"></script>  
+        <script src="app.js"></script>
+    </head>
+    <body ng-init="numBooks=1">
+    <div ng-controller='headController'>
+   		 <div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+				  <div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#shiv-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <a class="navbar-brand" href="#/">{{appDetails.title}}</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="shiv-collapse-1">
+						 <ul class="nav navbar-nav">
+							<li class="divideLi" ng-class="{active: nav.isActive('/')}" ><a href="#/">Books</a></li>
+							<li ng-class="{active: nav.isActive('/cart')}" class="divideLi"><a href="#/cart">Cart</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+					</div>  
+				</nav>
+				</div>
+				<p class="text-center startOfBody colorWhite">
+				Welcome to BooKart
+				{{appDetails.tagLine}}
+				</p>
+  		</div>
+  		
+  		<div ng-view class="animatePageIndex"></div>
+  		
+    </body>
+</html>

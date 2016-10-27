@@ -1,0 +1,22 @@
+<h1 class="colorWhite text-center">Awesome you are ready for checkout</h1>
+<div ng-controller='cartController'>
+	 <div class="container">
+		<br>
+		<div class="bookRowFormatting">
+			<div ng-repeat="bookRepeat in cart">
+				<div class="row divMargin">
+					<div class="col-sm-3">
+						<img class="GOT" ng-src="{{bookRepeat.bookImage}}" alt="">
+					</div>
+					<div class="col-sm-9 colorBlack">
+						<p class="fontSizeSet1">{{bookRepeat.bookName}} <span class="pull-right">Price: {{bookRepeat.Price | currency:'$'}}</span></p>
+						<p class="fontSizeSet2">Binding: {{bookRepeat.Binding}} <span class="pull-right">Rating: {{bookRepeat.Rating}}</span></p>
+						<p class="fontSizeSet2">Released: {{bookRepeat.Released}} <span class="pull-right">Publisher: {{bookRepeat.Publisher}}</span></p>
+						<p class="fontSizeSet2">Details: {{bookRepeat.Details}}</p>
+						<button class="btn btn-lg btn-primary pull-right" ng-click="buy(bookRepeat)">Buy</button>
+					</div>	
+				</div>
+			<hr>
+			</div>
+		</div>
+</div>

@@ -1,0 +1,34 @@
+<div ng-controller='bodyController'>
+	 <div class="container">
+		<div class="row text-center">
+			<div class="col-sm-4 col-sm-offset-4">
+				 <form>
+					<div class="form-group">
+						<input type="text" ng-model="searchCriteria" placeholder="Search book" class="form-control">
+
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+		<br>
+		<div class="bookRowFormatting">
+		
+			<div class="animateBooks" ng-repeat="bookRepeat in books | filter:searchCriteria">
+				<div class="row divMargin">		
+					<div class="col-sm-3">
+						<img class="GOT" ng-src="{{bookRepeat.bookImage}}" alt="">
+					</div>
+					<div class="col-sm-9 colorBlack">
+						<p class="fontSizeSet1">{{bookRepeat.bookName}} <span class="pull-right">Price: {{bookRepeat.Price | currency:'$'}}</span></p>
+						<p class="fontSizeSet2">Binding: {{bookRepeat.Binding}} <span class="pull-right">Rating: {{bookRepeat.Rating}}</span></p>
+						<p class="fontSizeSet2">Released: {{bookRepeat.Released}} <span class="pull-right">Publisher: {{bookRepeat.Publisher}}</span></p>
+						<p class="fontSizeSet2">Details: {{bookRepeat.Details}}</p>
+						<a href="" class="btn btn-lg btn-primary pull-right" ng-click="addToCart(bookRepeat)">Add to Cart</a>
+					</div>	
+				</div>
+			<hr>
+			</div>
+		</div>
+</div>

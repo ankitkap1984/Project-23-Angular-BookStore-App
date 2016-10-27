@@ -1,0 +1,123 @@
+html{
+	height: 100%;
+	outline: none;
+}
+.tagLine{
+	font-size: 0.8em;
+	outline: none;
+}
+
+.navbar-header{
+	margin-right: 150px;
+	padding-right: 150px;
+	outline: none;
+}
+
+.startOfBody{
+	margin-top: 70px;
+	outline: none;
+	font-size: 2.6em;
+}
+
+.nav{
+	font-size: 1.2em;
+	outline: none;
+}
+
+.navbar-brand{
+	font-size: 1.7em;
+	outline: none;
+}
+
+body{
+	background: url(../1.jpg);
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	outline: none;
+}
+
+.divideLi{
+	outline: none;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.colorWhite{
+	color:white;
+	outline: none;
+}
+
+.colorBlack{
+	color:Black;
+	outline: none;
+}
+
+.bookRowFormatting{
+	border:2px solid white;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 10px;
+	padding:10px;
+	outline: none;
+}
+
+.GOT{
+	width:80%;
+	outline: none;
+	
+}
+
+.divMargin{
+	margin-top: 20px;
+	outline: none;
+
+	
+}
+
+.fontSizeSet1{
+	font-size: 1.5em;
+}
+
+.fontSizeSet2{
+	font-size: 0.9em;
+}
+
+.animatePageIndex.ng-enter{
+	-webkit-transition:0.5s linear all;
+	 -moz-transition:0.5s linear all;
+	 -o-transition:0.5s linear all;
+	 transition:0.5s linear all;
+	 opacity:0;
+}
+
+.animatePageIndex.ng-enter-active {
+	 opacity:1;
+}
+
+.animateBooks.ng-leave {
+	-webkit-transition:0.2s linear all;
+	 -moz-transition:0.2s linear all;
+	 -o-transition:0.2s linear all;
+	 transition:0.2s linear all;
+	 opacity:1;
+	 
+}
+
+.animateBooks.ng-leave-active {
+	opacity:0;
+}
+
+
+.animateBooks.ng-enter {
+	-webkit-transition:0.2s linear all;
+	 -moz-transition:0.2s linear all;
+	 -o-transition:0.2s linear all;
+	 transition:0.2s linear all;
+	 opacity:0;
+	 
+}
+
+.animateBooks.ng-enter-active {
+	opacity:1;
+}
+
