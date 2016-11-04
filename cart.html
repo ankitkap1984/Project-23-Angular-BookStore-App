@@ -13,7 +13,32 @@
 						<p class="fontSizeSet2">Binding: {{bookRepeat.Binding}} <span class="pull-right">Rating: {{bookRepeat.Rating}}</span></p>
 						<p class="fontSizeSet2">Released: {{bookRepeat.Released}} <span class="pull-right">Publisher: {{bookRepeat.Publisher}}</span></p>
 						<p class="fontSizeSet2">Details: {{bookRepeat.Details}}</p>
-						<button class="btn btn-lg btn-primary pull-right" ng-click="buy(bookRepeat)">Buy</button>
+						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+							<!-- Specifies Buy Now Button -->
+							<input type="hidden" name="cmd" value="_xclick">
+							<!-- PayPal Email -->
+							<input type="hidden" name="business" value="seller@gmail.com">
+							<!-- Item Name -->
+							<input type="hidden" name="item_name" value="{{bookRepeat.bookName}}">
+							<!-- Item ID -->
+							<input type="hidden" name="item_number" value="1">
+							<!-- Currency Code -->
+							<input type="hidden" name="currency_code" value="USD">
+							<!-- Price -->
+							<input type="hidden" name="amount" value="{{bookRepeat.Price}}">
+							<!-- Specify Shipping -->
+							<input type='hidden' name='no_shipping' value='1'>
+							<!-- Return method -->
+							<input type='hidden' name='rm' value='2'>
+							<!-- Return URL -->
+							<input type="hidden" name="return" value="http://127.0.0.1:62329/index.htm#/">
+							<!-- Cancel Return URL -->
+							<input type="hidden" name="cancel_return" value="http://127.0.0.1:62329/index.htm#/">
+											   
+							<!-- Button -->
+							<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_107x26.png" name="submit" alt="Buy Now">
+						</form> 
+						
 					</div>	
 				</div>
 			<hr>
